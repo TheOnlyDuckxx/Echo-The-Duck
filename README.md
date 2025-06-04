@@ -1,4 +1,4 @@
-# DUCK++ Voice Assistant
+# Echo The Duck Voice Assistant
 
 A modular, Python-based voice assistant that supports offline speech recognition (Vosk), text-to-speech (pyttsx3), fuzzy command matching, and a plugin architecture. Commands are triggered via a configurable wake word and a strict Vosk grammar for command keywords.
 
@@ -64,7 +64,7 @@ A modular, Python-based voice assistant that supports offline speech recognition
 5. **Download a Vosk model** (e.g., `vosk-model-small-en-us-0.15`) and place it under the `models/` folder. For example:
 
    ```
-   DUCK++/
+   Echo-The-Duck/
    ├─ core.py
    ├─ requirements.txt
    ├─ config.json
@@ -213,7 +213,7 @@ You: Berlin
   - Show or change the assistant’s name.  
   - Usage:  
     - `You: name` → “My current name is Echo.”  
-    - `You: name Jarvis` → “My name has been changed to Jarvis.”
+    - `You: name Bob` → “My name has been changed to Bob.”
 
 - **`timer` / `countdown`**  
   - Sets a countdown of X minutes.  
@@ -222,7 +222,7 @@ You: Berlin
     ```
     You: timer two
     [Echo]: Timer set for 2 minutes.
-    (After 2 minutes) [Echo]: ⏰ Timer for 2 minutes is up!
+    (After 2 minutes) [Echo]: Timer for 2 minutes is up!
     ```
 
 - **`weather` / `forecast`**  
@@ -249,8 +249,8 @@ You: Berlin
   - Opens your default web browser to search Google for a given query.  
   - Example:  
     ```
-    You: search OpenAI GPT-4
-    [Echo]: Searching the web for OpenAI GPT-4…
+    You: search panda
+    [Echo]: Searching the web for panda
     ```
 
 - **`time`**  
@@ -307,19 +307,9 @@ After saving `example.py`, restart `core.py`. The new command `"example"` (and `
   - Vosk’s small model might not include proper nouns (like “Echo”). Switch your wake word to a common word in the model’s vocabulary (e.g., “hello”), or use fuzzy matching instead of a strict grammar.  
   - To use fuzzy matching for wake detection, remove the Vosk grammar and revert to a loop that checks `partial_ratio("echo", raw_text)`.
 
-- **`run loop already started` (pyttsx3 error)**  
-  - This can happen if both the main thread and a timer thread call `engine.runAndWait()` simultaneously. Ensure you use a shared `threading.Lock` in `init_tts` so only one `speak()` runs at a time.
-
-- **Numbers come through as words** (timer plugin)  
-  - Install `word2number` (included in `requirements.txt`) so the timer can parse “five” or “one point five” correctly.
-
-- **Microphone not detected / PyAudio errors**  
-  - Make sure your audio driver is installed. On Windows, you may need to install the matching PyAudio wheel for your Python version/architecture.  
-  - On Linux, you might need `sudo apt-get install portaudio19-dev` before installing `pyaudio`.
-
 - **No internet for Wikipedia / Weather**  
   - Wikipedia and weather plugins rely on Internet access. If offline, these commands will return an error.
 
 ---
 
-With this README, you should have everything needed to install dependencies, configure your settings, and start using or extending the DUCK++ Voice Assistant. Feel free to add more plugins or tweak thresholds to match your environment and accent. Enjoy!
+With this README, you should have everything needed to install dependencies, configure your settings, and start using or extending Echo The Duck. Feel free to add more plugins or tweak thresholds to match your environment and accent. Enjoy!
