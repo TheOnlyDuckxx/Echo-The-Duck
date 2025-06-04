@@ -1,0 +1,23 @@
+{
+  "assistant": {
+    "name": "Echo The Duck",
+    "wake_words": [
+      "echo"
+    ],
+    "wake_threshold": 60
+  },
+  "music": {
+    "folder": "C:\\Users\\Admin\\Music"
+  },
+  "screenshots": {
+    "folder": "C:\\Users\\Admin\\OneDrive - R\u00e9gion \u00cele-de-France\\Documents\\NSI\\Echo-The-Duck\\screenshots"
+  },
+  "weather": {
+    "apikey": "5fba5db9ffe90dfd47286a8e5bf0e7c7",
+    "units": "metric",
+    "default_city": "Paris"
+  },
+  "stt": {
+    "model_path": "models\\vosk-model-small-en-us-0.15"
+  }
+}

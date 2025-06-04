@@ -1,0 +1,20 @@
+# Text-to-speech
+pyttsx3
+
+# Fuzzy matching
+fuzzywuzzy
+python-Levenshtein
+
+# Vosk (offline STT) and audio I/O
+vosk
+pyaudio
+
+# Wikipedia lookup
+wikipedia
+beautifulsoup4
+
+# Number-words → digits (timer plugin)
+word2number
+
+# Screenshot and website plugins
+pyautogui
