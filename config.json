@@ -7,13 +7,13 @@
     "wake_threshold": 60
   },
   "music": {
-    "folder": "C:\\Users\\Admin\\Music"
+    "folder": "PATH_TO_FOLDER"
   },
   "screenshots": {
-    "folder": "C:\\Users\\Admin\\OneDrive - R\u00e9gion \u00cele-de-France\\Documents\\NSI\\Echo-The-Duck\\screenshots"
+    "folder": "PATH_TO_FOLDER"
   },
   "weather": {
-    "apikey": "5fba5db9ffe90dfd47286a8e5bf0e7c7",
+    "apikey": "API_KEY",
     "units": "metric",
     "default_city": "Paris"
   },
